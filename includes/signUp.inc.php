@@ -1,63 +1,63 @@
 <?php
 
-session_start();
-// require 'database.inc.php';
-
-// $dsn = 'mysql:host=' . $serverName .';dbname='. $dBName;
-
-// $pdo = new PDO($dsn, $dBUsername, $dBPassword);
-// $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-
-// if (isset($_POST['submit'])) {
-//     $email = $_POST['email'];
-//     $password = $_POST['password'];
-//     $confirmPassword = $_POST['confirmPassword'];
-//     $username = $_POST['username'];
-//     // $email = "123@gmail.com";
-//     // $password = "123456";
-//     // $confirmPassword = "123456";
-//     // $username = "Jack";
-
-
-// // $stmt = $pdo->query('INSERT INTO users(usersName, usersEmail, usersPassword) VALUES (:username, :email, :pwd)')
-// $sql = 'INSERT INTO users(usersName, usersEmail, usersPassword) VALUES (:username, :email, :pwd)';
-// $stmt = $pdo->prepare($sql);
-// $stmt->execute(['username' => $username, 'email' => $email, 'pwd' => $password]);
-// }
+// check submit button if click
 if (isset($_POST['submit'])) {
+    // Get the values from the fields
     $email = $_POST['email'];
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirmPassword'];
     $username = $_POST['username'];
+    setcookie('sign_up_email', $email, time() + 3600, '/');
+    setcookie('sign_up_username', $username, time() + 3600, '/');
 
+    // Include database and functions
     require_once 'database.inc.php';
     require_once 'functions.inc.php';
 
-    // we need function for pass, confirm pass, username
-    if (emptyInputSignup($email, $username, $password, $confirmPassword)) {
-        header("location: ../signUp.php?error=emptyinput");
+    // Empty Email
+    if (empty($email)) {
+        header("location: ../signUp.php?error=emptyEmail");
         exit();
     }
+    // Empty Username
+    if (empty($username)) {
+        header("location: ../signUp.php?error=emptyUsername");
+        exit();
+    }
+    // Empty password
+    if (empty($password)) {
+        header("location: ../signUp.php?error=emptyPassword");
+        exit();
+    }
+    // Empty confirm Password
+    if (empty($confirmPassword)) {
+        header("location: ../signUp.php?error=emptyConfirmPassword");
+        exit();
+    }
+    // Invalid Username
     if (invalidUid($username)) {
         header("location: ../signUp.php?error=invalidUid");
         exit();
     }
-
+    // Different Passwords
     if (passwordsMatch($password, $confirmPassword) !== false) {
         header("location: ../signUp.php?error=diffPasswords");
         exit();
     }
+    // Username or email exists
     if (uidExists($username, $email)) {
         header("location: ../signUp.php?error=usernametaken");
         exit();
     }
+    // Invalid email
     if (invalidEmail($email) !== false) {
         header("location: ../signUp.php?error=invalidemail");
         exit();
     }
-    createUser($conn, $username, $email, $password);
-
-} else {
-    header("location: ../signUp.php");
+    // Create user
+    createUser($username, $email, $password);
 }
-
+// } else {
+//     // If not set back to sign up form
+//     header("location: ../signUp.php");
+// }

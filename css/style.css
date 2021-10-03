@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Nav bar */
+.navbar {
+    border: 1px solid #0088a9;
+    background-color: #0088a9;
+    padding: 10px;
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    background-color:  #0088a9;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+
+
+/* Whole website */
+body {
+    background-color: #141526;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+
+}
+
+html {
+    height: 100%;
+}
+
+.content {
+    margin-top: 20%;
+    /* max-width: 1000px; */
+}
+
+.contentforgotPassword {
+    margin-top: 20%;
+    max-width: 600px;
+}
+
+h3 {
+    text-align: center;
+    
+}
+
+.formUser {
+    align-items: center;
+    padding: 30px;
+    box-shadow: -1px 1px 20px 10px black;
+    background: rgba(0, 0, 0, 0.3);
+    /* border: 1px solid white; */
+    border-radius: 50px;
+}
+
+.formUser h1 {
+    text-align: center;
+    font-size: 55px;
+}
+
+.button {
+    margin-top: 5px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #0088a9;
+    padding: 10px 15px;
+    border-radius: 10px;
+    align-items: center;
+    margin-left: 2px;
+    text-decoration: none;
+}
+
+
+.contentforgotPassword .button{
+    margin-top: 10px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #0088a9;
+    padding: 10px 15px;
+    border-radius: 10px;
+
+    margin-left: 35%;
+}
+
+.button:hover{
+    color: white;
+    background-color: #0088a9;
+    transition: 0.5;
+}
+
+.alert {
+    border-radius: 15px;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.container .content .signUp .row .col-md-6 .form-control {
+    margin-top: 5px;
+    margin: 10px;
+}
+.container .contentforgotPassword .forgotPassword .row{
+    margin-top: 5px;
+    margin: 10px;
+}
+
+.forgotAndButton {
+
+    margin-left: 0px;
+    align-items: center;
+}
+
+#forgot {
+    margin-top: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+#forgot:hover {
+    color: #0088a9;
+}
+
+.text-center1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.test {
+    border: 1px solid;
+}
+
+.test2 {
+    border: 1px solid red;
+}
+
+.margin {
+    margin: 10px 0px 10px 0px;
+    padding: 8px;
+}
+.eventName {
+    text-decoration: none;
+    padding: 0;
+    color: white;
+}
+.eventName:hover {
+    cursor: pointer;
+
+    color: black;
+}
+
+.activeCalendar {
+    fill: green;
+}
+
+/* .event {
+    padding: 20px;
+    height: 700px;
+    background-color: #0088a9;
+} */
+
+
+
+.icons-size {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.expand-click-area {
+    display:inline-block;
+    padding:5px;
+    margin:-5px;
+    white-space: nowrap;
+}
+
+.span-inline {
+    max-width: 35px;
+}
+
+#createPoll:hover {
+    color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.hoverRow {
+    background-color: rgb(0,136,169);
+}
+.hoverRow:hover {
+    background-color: rgb(13,202,240,0.9);
+    transition: 0.5s;
+}
+
+#playButton {
+    font-size: 28px;
+    color: rgb(24, 207, 24);
+}
+
+#stopButton {
+    font-size: 28px;
+    color: rgb(250, 75, 75);
+}
+
+.green {
+    color: rgb(24, 207, 24);
+    cursor: none;
+}
+
+.white {
+    color: rgb(255, 255, 255);
+    cursor: none;
+}
+
+.black {
+    /* color: rgb(255, 255, 255); */
+    color: rgb(0, 0, 0);
+    cursor: none;
+}
+
+/* Guest Design */
+
+.questionButton {
+    margin-top: 5px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #0088a9;
+    padding: 10px 15px;
+    border-radius: 10px;
+    align-items: center;
+    margin-left: 2px;
+    text-decoration: none;
+}
+
+.questionButton:hover{
+    color: white;
+    background-color: #0088a9;
+    transition: 0.5;
+}
+
+.noneDisplay {
+    display: none;
+}
+
+.colorShowAnswers {
+    color: rgb(243, 184, 36);
+}
+
+#askQuestion {
+    background-color: transparent;
+    resize: none;
+    border: none;
+    transition: 1s;
+}
+
+.grey {
+    color: grey;
+}
+
+.question {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, 
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, 
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.nav-tabs .nav-item.show .activeTabs, .nav-tabs .activeTabs.active {
+    background-color: transparent;
+}
+
+.answers {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.959) 0px 12px 28px 0px, 
+    rgba(0, 0, 0, 0.486) 0px 2px 4px 0px, 
+    rgba(255, 255, 255, 0.993) 0px 0px 0px 1px inset;
+}
+
+.reply {
+    background-color: rgb(230, 230, 230);
+    border-radius: 20px;
+}
+
+#messageLabel {
+    border: none;
+    background-color: transparent;
+    color: black;
+}
+
+.highlight {
+    background-color: blueviolet;
+    transition: 1s;
+}
+
+.highlight:hover {
+    background-color: rgb(176, 106, 241);
+}
+
+.guestHighlight {
+    background-color: #c2e694;
+    transition: 1s;
+    box-shadow: rgba(0, 0, 0, 0.959) 0px 12px 28px 0px, 
+    rgb(0, 0, 0) 0px 2px 4px 0px, 
+    rgba(205, 235, 136, 0.993) 0px 0px 0px 1px inset;
+}
+
+.blue {
+    color: rgb(0,132,255);
+}
+
+.green-light {
+    background-color: rgb(171, 240, 180);
+    box-shadow: rgba(0, 0, 0, 0.959) 0px 12px 28px 0px, 
+    rgb(0, 0, 0) 0px 2px 4px 0px, 
+    rgba(178, 241, 172, 0.993) 0px 0px 0px 1px inset;
+}
+
+#editMsgModal {
+    color: black;
+}
+
+.click {
+    cursor: pointer;
+}
+
+.black {
+    color: rgb(212, 212, 212);
+}
+
+.greyBG {
+    background-color: rgb(230, 230, 230);
+}
+
+
+#dropdownMenuNav {
+    border: none;
+    color: rgba(255,255,255,.55);
+    background-color: transparent;
+}
+
+.editprofile {
+    letter-spacing: 1.5px;
+}
+
+.indexa {
+    text-decoration: none;
+    color: white;
+    line-height: 2.5;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+.indexa:hover {
+    color: rgb(13,202,240,0.9);
+}
+
+#stars {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    text-align: center;
+    display: inline-block;
+}
+
+.starsText {
+    font-size: 18px;
+}
+
+.yellowStars {
+    color: rgb(238, 255, 0);
+    letter-spacing: 20px;
+}
+
+.starGuest{
+    letter-spacing: 20px;
+    font-size: 40px;
+}
+
+#allPolls {
+    height: 580px;
+    overflow:auto;
+}
+
+#pollResult{
+    background-color: #0088a9;
+}
+
+.pollClick {
+    background-color: #0088a9;
+}
+#nikolas {
+    font-size: 80px;
+}
+/* Scroll Bar at All results See polls */
+body::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+}
+  
+body::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+  }
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #0087a9a8;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
